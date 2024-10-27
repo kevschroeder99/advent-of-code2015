@@ -3,6 +3,7 @@ package day02;
 import util.CustomReader;
 
 import java.io.IOException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,10 +28,7 @@ public class WrappingPaperCalculator {
 
             Integer neededWrappingPaper = box.getWarppingPaperSurface();
             wrappingPaper.add(neededWrappingPaper);
-            System.out.println(neededWrappingPaper);
             Integer neededRibbon = box.getRibbonForPresent();
-            //TODO: Why is this wrong?
-            System.out.println(neededRibbon);
             ribbonSize.add(neededRibbon);
         }
         System.out.println("Day 2#1 - Wrapping Paper: " + wrappingPaper.stream().mapToInt(Integer::intValue).sum());

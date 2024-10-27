@@ -1,8 +1,8 @@
 package day02;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.OptionalInt;
 
 public class PresentBox {
 
@@ -32,8 +32,12 @@ public class PresentBox {
     }
 
     public int getRibbonForPresent() {
-        int length = this.length + this.length;
-        int width = this.width + this.width;
+        List<Integer> sizeList = Arrays.asList(this.length, this.width, this.height);
+        //Liste sortieren, da 'The ribbon required to wrap a present is the shortest distance around its sides,
+        // or the smallest perimeter of any one face'
+        Collections.sort(sizeList);
+        int length = 2 * sizeList.get(0);
+        int width = 2 * sizeList.get(1);
 
         int bow = this.length * this.width * this.height;
 
