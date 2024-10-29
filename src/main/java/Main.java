@@ -1,6 +1,7 @@
 import day01.Navigator;
 import day02.WrappingPaperCalculator;
 import day05.StringCheckerPart1;
+import day05.StringCheckerPart2;
 
 
 public class Main {
@@ -17,5 +18,7 @@ public class Main {
         // Day 5
         StringCheckerPart1 stringChecker = new StringCheckerPart1();
         stringChecker.checkString();
+        StringCheckerPart2 stringChecker2 = new StringCheckerPart2();
+        stringChecker2.checkString();
     }
 }
